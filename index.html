@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 편지함</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏫 학교 편지함</h1>
+        
+        <form action="https://script.google.com/a/macros/hcu.hs.kr/s/AKfycbw0vrWUhj3Fbvs8a6GfRSl8qHJMhEvHFXnTrcTt0WRBsyliUlgnz1evGyB88CCxDrB8tQ/exec" method="POST">
+            <!-- 분류 선택 -->
+            <div class="form-group">
+                <label for="category">분류</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>선택해주세요</option>
+                    <option value="선배">선배</option>
+                    <option value="동학년">동학년</option>
+                    <option value="후배">후배</option>
+                </select>
+            </div>
+
+            <!-- 받는 사람 이름 -->
+            <div class="form-group">
+                <label for="receiver">상대방 이름</label>
+                <input type="text" id="receiver" name="receiver" placeholder="이름을 입력하세요" required>
+            </div>
+
+            <!-- 편지 내용 -->
+            <div class="form-group">
+                <label for="message">편지 내용</label>
+                <textarea id="message" name="message" placeholder="마음을 전할 내용을 적어주세요..." required></textarea>
+            </div>
+
+            <!-- 제출 버튼 -->
+            <button type="submit">제출하기</button>
+        </form>
+    </div>
+
+</body>
+</html>
